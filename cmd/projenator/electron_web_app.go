@@ -19,8 +19,8 @@ import (
 func init() {
 	rootCmd.AddCommand(electronWebAppCmd)
 
-	electronWebAppCmd.PersistentFlags().Bool("npmi", false, "Run npm install after the template is created")
-	electronWebAppCmd.PersistentFlags().Bool("yarni", false, "Run yarn install after the template is created")
+	electronWebAppCmd.PersistentFlags().Bool("npm", false, "Run npm install after the template is created")
+	electronWebAppCmd.PersistentFlags().Bool("yarn", false, "Run yarn install after the template is created")
 	electronWebAppCmd.PersistentFlags().Int("width", 800, "Defines the width of the browser window")
 	electronWebAppCmd.PersistentFlags().Int("height", 600, "Defines the height of the browser window")
 }
@@ -30,8 +30,8 @@ var electronWebAppCmd = &cobra.Command{
 	Short: "Generate electron web app from a url",
 	Args:  cobra.ExactArgs(2),
 	RunE: func(cmd *cobra.Command, args []string) error {
-		npmInstallFlag, _ := cmd.Flags().GetBool("npmi")
-		yarnInstallFlag, _ := cmd.Flags().GetBool("yarni")
+		npmInstallFlag, _ := cmd.Flags().GetBool("npm")
+		yarnInstallFlag, _ := cmd.Flags().GetBool("yarn")
 		widthFlag, _ := cmd.Flags().GetInt("width")
 		heightFlag, _ := cmd.Flags().GetInt("height")
 
