@@ -80,10 +80,8 @@ var electronWebAppCmd = &cobra.Command{
 					return err
 				}
 			}
-
 		} else {
-			cmd.PrintErrln("A file or folder with the name", name, "already exists!")
-			return os.ErrExist
+			return errors.New(fmt.Sprint("A file or folder with the name '", name, "' already exists!"))
 		}
 
 		return nil
