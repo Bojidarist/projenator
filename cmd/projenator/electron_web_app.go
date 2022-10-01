@@ -81,7 +81,7 @@ var electronWebAppCmd = &cobra.Command{
 				}
 			}
 		} else {
-			return errors.New(fmt.Sprint("A file or folder with the name '", name, "' already exists!"))
+			return errors.New(fmt.Sprint("a file or folder with the name '", name, "' already exists!"))
 		}
 
 		return nil
