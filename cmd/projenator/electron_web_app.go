@@ -39,6 +39,10 @@ var electronWebAppCmd = &cobra.Command{
 		url := args[1]
 		dirPath := filepath.Join(".", name)
 
+		if strings.Contains(name, "/") {
+			return errors.New("name should not contain '/'")
+		}
+
 		if _, err := os.Stat(dirPath); errors.Is(err, os.ErrNotExist) {
 			err := os.Mkdir(dirPath, os.ModePerm)
 			if err != nil {
