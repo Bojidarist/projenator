@@ -50,18 +50,18 @@ Use "projenator [command] --help" for more information about a command.
 ## Windows
 
 ```bash
-GOOS=windows GOARCH=amd64 go build -ldflags "-s -w" -o builds/projenator-amd64-windows.exe
+GOOS=windows GOARCH=amd64 go build -ldflags "-s -w" -o bin/projenator-amd64-windows.exe
 ```
 
 ## Linux
 
 ```bash
-GOOS=linux GOARCH=amd64 go build -ldflags "-s -w" -o builds/projenator-amd64-linux
+GOOS=linux GOARCH=amd64 go build -ldflags "-s -w" -o bin/projenator-amd64-linux
 ```
 
 ## Mac
 
 ```bash
-GOOS=darwin GOARCH=amd64 go build -ldflags "-s -w" -o builds/projenator-amd64-darwin
+GOOS=darwin GOARCH=amd64 go build -ldflags "-s -w" -o bin/projenator-amd64-darwin
 ```
 
